@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="70dp"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_normal_level"
+    android:id="@+id/normal_level"
+    android:text="hellow"
+    android:textColor="#EC4611"
+    android:textStyle="bold"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+    />
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mouseHole">
+
+    <fragment
+        android:id="@+id/mouseHole"
+        android:name="com.synthia.mousehunt.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mouseHole_to_levelsFragment"
+            app:destination="@id/levelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelsFragment"
+        android:name="com.synthia.mousehunt.LevelsFragment"
+        android:label="fragment_levels"
+        tools:layout="@layout/fragment_levels" >
+        <action
+            android:id="@+id/action_levelsFragment_to_ratHoleFragment"
+            app:destination="@id/ratHoleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratHoleFragment"
+        android:name="com.synthia.mousehunt.RatHoleFragment"
+        android:label="fragment_rathole"
+        tools:layout="@layout/fragment_rathole" >
+        <argument
+            android:name="level"
+            app:argType="com.synthia.mousehunt.Level" />
+    </fragment>
+
+</navigation>
