@@ -8,10 +8,36 @@
     android:id="@+id/one"
     android:background="@drawable/bg_jungle">
 
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="20dp"
+      android:layout_centerInParent="true"
+      android:hint="User ID"
+      android:textColorHint="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxStrokeWidth="3dp"
+      app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+      android:id="@+id/userIdholder"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      app:boxBackgroundColor="@color/white"
+      app:boxCornerRadiusBottomEnd="20dp"
+      app:boxCornerRadiusTopEnd="20dp"
+      app:boxCornerRadiusBottomStart="20dp"
+      app:boxCornerRadiusTopStart="20dp"
+      >
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="number"
+          android:id="@+id/userIdInput"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/userIdView"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/userIdholder"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -19,52 +45,28 @@
         android:elevation="10dp"
         android:fontFamily="@font/butcherman"
         android:padding="10dp"
-        android:text="UserID:100"
+        android:text="Login"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:backgroundTint="#50412A"
         app:cornerRadius="20dp" />
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/pointsView"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/userIdholder"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/btnLogin"
         android:elevation="10dp"
-        android:layout_toEndOf="@+id/userIdView"
         android:fontFamily="@font/butcherman"
         android:padding="10dp"
-        android:text="Points:0"
+        android:text="Create New Account"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:backgroundTint="#50412A"
         app:cornerRadius="20dp" />
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/levelView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:elevation="10dp"
-        android:layout_below="@+id/pointsView"
-        android:fontFamily="@font/butcherman"
-        android:padding="10dp"
-        android:text="Current Level:0"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-        app:backgroundTint="#50412A"
-        app:cornerRadius="20dp" />
-    <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:scaleType="fitXY"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/bg_play"
-        android:layout_below="@+id/levelView"
-        android:layout_marginTop="30dp"
-        android:elevation="10dp"
-        android:id="@+id/playView"/>
 <com.google.android.material.progressindicator.CircularProgressIndicator
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

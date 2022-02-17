@@ -4,15 +4,23 @@ import com.google.gson.Gson;
 
 import java.io.Serializable;
 
-public class Points  implements Serializable {
-    int _userId,_points;
+public class User implements Serializable {
+    Level _level;
+    int _userId=0;
+    Points _points;
 
-    public Points(int _userId, int _points) {
+    public User(Level _level, int _userId, Points _points) {
+        this._level = _level;
         this._userId = _userId;
         this._points = _points;
     }
 
-    public Points() {
+    public Level get_level() {
+        return _level;
+    }
+
+    public void set_level(Level _level) {
+        this._level = _level;
     }
 
     public int get_userId() {
@@ -23,11 +31,11 @@ public class Points  implements Serializable {
         this._userId = _userId;
     }
 
-    public int get_points() {
+    public Points get_points() {
         return _points;
     }
 
-    public void set_points(int _points) {
+    public void set_points(Points _points) {
         this._points = _points;
     }
 

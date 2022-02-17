@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mouseHole_to_levelsFragment"
             app:destination="@id/levelsFragment" />
+        <action
+            android:id="@+id/action_mouseHole_to_authFragment"
+            app:destination="@id/authFragment" />
     </fragment>
     <fragment
         android:id="@+id/levelsFragment"
@@ -31,6 +34,15 @@
         <argument
             android:name="level"
             app:argType="com.synthia.mousehunt.Level" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.synthia.mousehunt.AuthFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_authFragment_to_mouseHole"
+            app:destination="@id/mouseHole" />
     </fragment>
 
 </navigation>

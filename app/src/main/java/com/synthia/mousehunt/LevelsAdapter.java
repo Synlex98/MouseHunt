@@ -33,7 +33,10 @@ public LevelsAdapter(Context context,List<Level> levelLists,ClickListener listen
     @Override
     public void onBindViewHolder(@NonNull LevelsAdapter.LevelHolder holder, int position) {
 Level level=levelLists.get(position);
-holder.binding.normalLevel.setText(String.valueOf(level.getNumber()));
+holder.binding.normalLevel.setText(String.valueOf(level._levelNumber));
+if (level._levelNumber==Utils.CURRENT_LEVEL){
+    holder.binding.normalLevel.setBackgroundResource(R.drawable.bg_current_level);
+}
 holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -47,7 +50,7 @@ holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
         return levelLists.size();
     }
 
-    public class LevelHolder extends RecyclerView.ViewHolder {
+    public static class LevelHolder extends RecyclerView.ViewHolder {
     LevelItemBinding binding;
         public LevelHolder(LevelItemBinding binding) {
             super(binding.getRoot());
