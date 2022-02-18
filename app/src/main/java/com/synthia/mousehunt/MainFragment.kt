@@ -63,7 +63,7 @@ findNavController().navigate(MainFragmentDirections.actionMouseHoleToAuthFragmen
 
     private fun getFromNear(user: User) {
 binding.progress.show()
-AndroidNetworking.post("http://192.168.100.115:8080/ops/user/get")
+AndroidNetworking.post("http://192.168.100.19:8080/ops/user/get")
     .addBodyParameter("userId",user.get_userId().toString())
     .setPriority(Priority.HIGH)
     .build()

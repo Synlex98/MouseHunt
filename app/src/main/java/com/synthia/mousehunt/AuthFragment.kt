@@ -47,7 +47,7 @@ class AuthFragment : Fragment() {
 
     private fun registerUser() {
         binding.progress.show()
-        AndroidNetworking.post("http://192.168.100.115:8080/ops/user/create")
+        AndroidNetworking.post("http://192.168.19.115:8080/ops/user/create")
             .setPriority(Priority.HIGH)
             .build()
             .getAsObject(User::class.java,object: ParsedRequestListener<User>{
